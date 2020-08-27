@@ -1,0 +1,7 @@
+{
+  id: game.id,
+  date:game.date,
+  letters: game.letters,
+  key_letter: game.key_letter,
+  words: game.words
+}

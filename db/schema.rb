@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_27_140605) do
+ActiveRecord::Schema.define(version: 2020_08_27_144423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
     t.date "date"
-    t.string "letters"
     t.string "key_letter"
     t.text "words", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "letters", default: [], array: true
     t.index ["words"], name: "index_games_on_words", using: :gin
   end
 
